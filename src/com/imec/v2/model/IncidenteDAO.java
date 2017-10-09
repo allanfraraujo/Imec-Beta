@@ -15,7 +15,7 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author aaraujo
+ * @author Allan F. Araujo
  */
 public class IncidenteDAO {
     Incidente incidente = new Incidente();
