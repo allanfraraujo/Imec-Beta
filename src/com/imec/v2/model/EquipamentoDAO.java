@@ -17,14 +17,15 @@ import java.sql.Statement;
 public class EquipamentoDAO {
     public Connection conn = null;
     Statement stm = null;
+    private String usernameEquip = "";
+    private String passwordEquip = "";
     private final String classForName = "com.mysql.jdbc.Driver";
-    private final String urlSql = "jdbc:mysql://172.18.54.8:3306/software_pesquisa?user=allanfaraujo&password=Aw3121";
-    private final String urlSqlHome = "jdbc:mysql://localhost:3306/mysql?user=root&password=Tenchin31!";
+    private final String urlSql = "jdbc:mysql://172.18.54.8:3306/software_pesquisa;
     
     public Connection conectar() {
         try{
             Class.forName(classForName);
-            conn = DriverManager.getConnection(urlSql);
+            conn = DriverManager.getConnection(urlSql, usernameEquip, passwordEquip);
             System.out.println("Conectou no banco de dados.");
         }catch(SQLException e){
             System.out.println("Não conectou no banco de dados." + e);
