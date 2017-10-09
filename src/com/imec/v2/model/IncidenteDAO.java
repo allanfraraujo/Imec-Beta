@@ -21,14 +21,15 @@ public class IncidenteDAO {
     Incidente incidente = new Incidente();
     Connection conn = null;
     Statement stm = null;
+    private String usernameUsr = "";
+    private String passwordUsr = "";
     private final String classForName = "com.mysql.jdbc.Driver";
-    private final String urlSql = "jdbc:mysql://172.18.54.8:3306/imec_v2?user=allanfaraujo&password=Aw3121";
-    private final String urlSqlHome = "jdbc:mysql://localhost:3306/mysql?user=root&password=Tenchin31!";
+    private final String urlSql = "jdbc:mysql://172.18.54.8:3306/imec_v2";
     
     public Connection conectar() {
         try{
             Class.forName(classForName);
-            conn = DriverManager.getConnection(urlSql);
+            conn = DriverManager.getConnection(urlSql, usernameUsr, passwordUsr);
             System.out.println("Conectou no banco de dados.");
         }catch(SQLException e){
             System.out.println("Não conectou no banco de dados." + e);
