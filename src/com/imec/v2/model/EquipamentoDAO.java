@@ -12,7 +12,7 @@ import java.sql.Statement;
 
 /**
  *
- * @author Administrator
+ * @author Allan F. Araujo
  */
 public class EquipamentoDAO {
     public Connection conn = null;
